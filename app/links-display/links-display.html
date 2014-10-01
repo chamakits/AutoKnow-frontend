@@ -9,6 +9,11 @@
   <script src="/lib/thirdparty/angularjs1.2.25/angular-resource.js"></script>
   <script src="/app/main/app.js"></script>
   <script src="/app/links-display/links-display-ctrl.js"></script>
+  <style>
+    a {
+      color: inherit;
+    }
+  </style>
 </head>
 
 <body ng-app="autoKnowApp">
@@ -17,7 +22,7 @@
       <div class="row">
 
         <div class="col-md-6">
-          <span class="label label-primary">Resource Path:{{link.resourcePath}}</span>
+          <span class="label label-primary">Resource Path:<a ng-href="//localhost:8080/{{link.resourcePath}}">{{link.resourcePath}}</a></span>
           <span class="label label-primary">Creation Time:{{link.creationTime}}</span>
           <span class="label label-primary">Enabled:{{link.enabledFlag}}</span>
           <span class="label label-primary">Expiration Time:{{link.expirationTime}}</span>
