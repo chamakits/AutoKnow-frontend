@@ -30,13 +30,14 @@
 
         scope.create = function(link) {
           console.log("Scope create");
-          console.log("link:" + link);
+          console.log("link:");
+          console.log(link);
           var newLink = new makelink();
           newLink.resourcePath = link.resourcePath;
           // newLink.redirectionPath = link.redirectionPath;
           newLink.redirectionPath = link.redirectionPath;
           newLink.$save();
         };
-    
+
     }]);
 }(this));
