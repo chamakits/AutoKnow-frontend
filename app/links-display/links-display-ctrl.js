@@ -11,8 +11,8 @@
       }
     });
   }]);
-  autoKnowAppControllers.controller("LinkDisplayCtrl", ["$scope", "$modal", "getlink",
-    function($scope, $modal, getlink) {
+  autoKnowAppControllers.controller("LinkDisplayCtrl", ["$scope", "getlink",
+    function($scope, getlink) {
 
       getlink.query(function(data) {
         $scope.links = data.links;
