@@ -1,0 +1,20 @@
+<div ng-controller="LinkDisplayCtrl">
+  <h1>Pageview modal </h1>
+  <h2>items:{{items}}</h2>
+  <div class="modal-header">
+    <h3 class="modal-title">Modal!</h3>
+  </div>
+  <div class="modal-body">
+    <ul>
+      <li ng-repeat="item in items">
+        <span class="label label-danger">Page View:{{item}}</span>
+        <span class="label label-primary">{{item.creationTime}}</span>
+        <span class="label label-primary">{{item.ipAddress}}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  </div>
+</div>
