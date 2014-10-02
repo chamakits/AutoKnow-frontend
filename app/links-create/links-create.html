@@ -17,9 +17,16 @@
 </head>
 
 <body ng-controller="LinkCreateCtrl">
+  Resource path:
+  <input type="text" ng-model="link.resourcePath" />
+  <br />Redirection path:
+  <input type="text" ng-model="link.redirectionPath" />
+  <button ng-click="create(link)">Create</button>
+  <button type="button" class="btn btn-danger" ng-click="create(link)">Create input link
+  </button>
+  <button type="button" class="btn btn-danger" ng-click="makeLinkFunction()">Create hardcoded link
+  </button>
 
-    <button type="button" class="btn btn-danger" ng-click="makeLinkFunction()"> Create hardcoded link
-    </button>
 
 </body>
 
