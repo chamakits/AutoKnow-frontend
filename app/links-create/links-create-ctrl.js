@@ -19,13 +19,6 @@
     }]);
     autoKnowAppControllers.controller("LinkCreateCtrl", ["$scope", "makelink",
       function(scope, makelink) {
-        scope.makeLinkFunction = function() {
-          var newLink = new makelink();
-          newLink.resourcePath = "myJsonPath";
-          newLink.redirectionPath = "https://duckduckgo.com/";
-          newLink.$save();
-        };
-
         console.log("Controller def.");
 
         scope.create = function(link) {
