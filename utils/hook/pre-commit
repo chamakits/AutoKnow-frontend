@@ -1,0 +1,6 @@
+#!/bin/sh
+
+
+gulp prettyallhtml
+gulp prettyalljs
+gulp prettyallcss
