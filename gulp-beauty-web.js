@@ -20,7 +20,7 @@ function beautify(beautifyFunction, options) {
     }
 
     if (file.isBuffer()) {
-      var prettyString = htmlBeautifyFunction(file.contents.toString(),options);
+      var prettyString = beautifyFunction(file.contents.toString(),options);
       file.contents = new Buffer(prettyString);
     }
 
