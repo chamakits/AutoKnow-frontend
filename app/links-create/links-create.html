@@ -1,55 +1,55 @@
 <html ng-app="autoKnowApp">
 
 <head>
-  <link rel="stylesheet" href="/lib/thirdparty/bootstrap-3.2.0-dist/css/bootstrap.css"></link>
-  <link rel="stylesheet" href="/lib/thirdparty/bootstrap-3.2.0-dist/css/bootstrap-theme.css"></link>
+    <link rel="stylesheet" href="/lib/thirdparty/bootstrap-3.2.0-dist/css/bootstrap.css"></link>
+    <link rel="stylesheet" href="/lib/thirdparty/bootstrap-3.2.0-dist/css/bootstrap-theme.css"></link>
 
-  <link rel="stylesheet" href="/style/thirdparty/purecss-0.5.0/pure.css"></link>
-  <link rel="stylesheet" href="/style/thirdparty/purecss-0.5.0/forms.css"></link>
+    <link rel="stylesheet" href="/style/thirdparty/purecss-0.5.0/pure.css"></link>
+    <link rel="stylesheet" href="/style/thirdparty/purecss-0.5.0/forms.css"></link>
 
-  <script src="/lib/thirdparty/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
-  <script src="/lib/thirdparty/angularjs1.2.25/angular.js"></script>
-  <script src="/lib/thirdparty/angularjs1.2.25/angular-resource.js"></script>
-  <script src="/app/main/app.js"></script>
-  <script src="/app/links-display/links-display-ctrl.js"></script>
-  <script src="/app/links-create/links-create-ctrl.js"></script>
-  <style>
-    a {
-      color: inherit;
-    }
-  </style>
+    <script src="/lib/thirdparty/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    <script src="/lib/thirdparty/angularjs1.2.25/angular.js"></script>
+    <script src="/lib/thirdparty/angularjs1.2.25/angular-resource.js"></script>
+    <script src="/app/main/app.js"></script>
+    <script src="/app/links-display/links-display-ctrl.js"></script>
+    <script src="/app/links-create/links-create-ctrl.js"></script>
+    <style>
+        a {
+            color: inherit;
+        }
+    </style>
 </head>
 
 <body ng-controller="LinkCreateCtrl">
-  <div class="pure-menu pure-menu-open pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading">AutoKnow</a>
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+        <a href="#" class="pure-menu-heading">AutoKnow</a>
 
-    <ul>
-      <li class="pure-menu-selected"><a href="/">Home</a>
-      </li>
-      <li><a href="/app/links-display/links-display.html">Link Display</a>
-      </li>
-      <li><a href="/app/links-create/links-create.html">Create link site</a>
-      </li>
-      <li><a href="localhost:8080/myPath">myPath example</a>
-      </li>
-    </ul>
-  </div>
+        <ul>
+            <li class="pure-menu-selected"><a href="/">Home</a>
+            </li>
+            <li><a href="/app/links-display/links-display.html">Link Display</a>
+            </li>
+            <li><a href="/app/links-create/links-create.html">Create link site</a>
+            </li>
+            <li><a href="localhost:8080/myPath">myPath example</a>
+            </li>
+        </ul>
+    </div>
 
-  <form validate class="pure-form" ng-submit="create(link)">
-    <fieldset>
-      <legend>Insert new link information:</legend>
+    <form validate class="pure-form" ng-submit="create(link)">
+        <fieldset>
+            <legend>Insert new link information:</legend>
 
-      <input type="text" placeholder="Resource path" ng-model="link.resourcePath">
-      <input type="url" placeholder="Redirection path" ng-model="link.redirectionPath" required>
+            <input type="text" placeholder="Resource path" ng-model="link.resourcePath">
+            <input type="url" placeholder="Redirection path" ng-model="link.redirectionPath" required>
 
-      <!-- <button type="submit" class="pure-button pure-button -primary" ng-click="create(link)"> -->
-      <button type="submit" class="pure-button pure-button-primary" >
-        Create link
-      </button>
+            <!-- <button type="submit" class="pure-button pure-button -primary" ng-click="create(link)"> -->
+            <button type="submit" class="pure-button pure-button-primary">
+                Create link
+            </button>
 
-    </fieldset>
-  </form>
+        </fieldset>
+    </form>
 
 
 </body>

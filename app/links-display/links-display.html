@@ -2,78 +2,78 @@
 
 <head>
 
-  <link rel="stylesheet" href="/lib/thirdparty/bootstrap-3.2.0-dist/css/bootstrap.css"></link>
-  <link rel="stylesheet" href="/lib/thirdparty/bootstrap-3.2.0-dist/css/bootstrap-theme.css"></link>
+    <link rel="stylesheet" href="/lib/thirdparty/bootstrap-3.2.0-dist/css/bootstrap.css"></link>
+    <link rel="stylesheet" href="/lib/thirdparty/bootstrap-3.2.0-dist/css/bootstrap-theme.css"></link>
 
-  <link rel="stylesheet" href="/style/thirdparty/purecss-0.5.0/pure.css"></link>
-  <link rel="stylesheet" href="/style/thirdparty/purecss-0.5.0/forms.css"></link>
+    <link rel="stylesheet" href="/style/thirdparty/purecss-0.5.0/pure.css"></link>
+    <link rel="stylesheet" href="/style/thirdparty/purecss-0.5.0/forms.css"></link>
 
-  <script src="/lib/thirdparty/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    <script src="/lib/thirdparty/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
 
-  <script src="/lib/thirdparty/angularjs1.2.25/angular.js"></script>
-  <script src="/lib/thirdparty/angularjs1.2.25/angular-resource.js"></script>
-  <script src="/lib/thirdparty/ui-bootstrap-0.11.2/ui-bootstrap-tpls-0.11.2.js"></script>
+    <script src="/lib/thirdparty/angularjs1.2.25/angular.js"></script>
+    <script src="/lib/thirdparty/angularjs1.2.25/angular-resource.js"></script>
+    <script src="/lib/thirdparty/ui-bootstrap-0.11.2/ui-bootstrap-tpls-0.11.2.js"></script>
 
-  <script src="/lib/thirdparty/lodash-2.4.1/lodash.js"></script>
+    <script src="/lib/thirdparty/lodash-2.4.1/lodash.js"></script>
 
-  <script src="/app/main/app.js"></script>
-  <script src="/app/links-display/links-display-ctrl.js"></script>
+    <script src="/app/main/app.js"></script>
+    <script src="/app/links-display/links-display-ctrl.js"></script>
 
 </head>
 
 <body ng-app="autoKnowApp">
-  <div class="pure-menu pure-menu-open pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading">AutoKnow</a>
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+        <a href="#" class="pure-menu-heading">AutoKnow</a>
 
-    <ul>
-      <li class="pure-menu-selected"><a href="/">Home</a>
-      </li>
-      <li><a href="/app/links-display/links-display.html">Link Display</a>
-      </li>
-      <li><a href="/app/links-create/links-create.html">Create link site</a>
-      </li>
-      <li><a href="localhost:8080/myPath">myPath example</a>
-      </li>
-    </ul>
-  </div>
+        <ul>
+            <li class="pure-menu-selected"><a href="/">Home</a>
+            </li>
+            <li><a href="/app/links-display/links-display.html">Link Display</a>
+            </li>
+            <li><a href="/app/links-create/links-create.html">Create link site</a>
+            </li>
+            <li><a href="localhost:8080/myPath">myPath example</a>
+            </li>
+        </ul>
+    </div>
 
-  <table class="pure-table pure-table-horizontal pure-table-striped" ng-controller="LinkDisplayCtrl">
-    <thead>
-      <th>Resource Path</th>
-      <th>Redirect To</th>
-      <th>Creation Time</th>
-      <th>Enabled</th>
-      <th>Expiration Date</th>
-      <th>PageViews</th>
-    </thead>
-    <tbody>
-      <tr ng-repeat="link in links">
-        <td><a ng-href="//localhost:8080/{{link.resourcePath}}">{{link.resourcePath}}</a>
-        </td>
-        <td><a ng-href="{{link.redirectionPath}}">{{link.redirectionPath}}</a>
-        </td>
-        <td>{{link.creationTime}}</td>
-        <td>{{link.enabledFlag}}</td>
-        <td>{{link.expirationTime}}</td>
-        <!-- <td><a ng-click="open(link.pageViews)">{{link.pageViews.length}}</a>
+    <table class="pure-table pure-table-horizontal pure-table-striped" ng-controller="LinkDisplayCtrl">
+        <thead>
+            <th>Resource Path</th>
+            <th>Redirect To</th>
+            <th>Creation Time</th>
+            <th>Enabled</th>
+            <th>Expiration Date</th>
+            <th>PageViews</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="link in links">
+                <td><a ng-href="//localhost:8080/{{link.resourcePath}}">{{link.resourcePath}}</a>
+                </td>
+                <td><a ng-href="{{link.redirectionPath}}">{{link.redirectionPath}}</a>
+                </td>
+                <td>{{link.creationTime}}</td>
+                <td>{{link.enabledFlag}}</td>
+                <td>{{link.expirationTime}}</td>
+                <!-- <td><a ng-click="open(link.pageViews)">{{link.pageViews.length}}</a>
         </td> -->
-        <td>
-          <table>
-            <thead>
-              <th>Time</th>
-              <th>IP</th>
-            </thead>
-            <tbody>
-              <tr ng-repeat="pageView in link.pageViews">
-                <td>{{pageView.creationTime}}</td>
-                <td>{{pageView.ipAddress}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+                <td>
+                    <table>
+                        <thead>
+                            <th>Time</th>
+                            <th>IP</th>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="pageView in link.pageViews">
+                                <td>{{pageView.creationTime}}</td>
+                                <td>{{pageView.ipAddress}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 
