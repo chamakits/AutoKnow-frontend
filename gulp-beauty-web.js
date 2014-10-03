@@ -2,7 +2,7 @@ var through = require('through2');
 var gutil = require('gulp-util');
 var PluginError = gutil.PluginError;
 
-const PLUGIN_NAME = 'gulp-beutify-html';
+const PLUGIN_NAME = 'gulp-beauty-web';
 
 function prefixStream(prefixText) {
   var stream = through();
@@ -12,7 +12,7 @@ function prefixStream(prefixText) {
 console.log("Loaded!")
 
 // plugin level function (dealing with files)
-function beautifyHtml(htmlBeautifyFunction, options) {
+function beautify(beautifyFunction, options) {
   // creating a stream through which each file will pass
   var stream = through.obj(function(file, enc, cb) {
     if (file.isNull()) {
@@ -20,11 +20,7 @@ function beautifyHtml(htmlBeautifyFunction, options) {
     }
 
     if (file.isBuffer()) {
-      // console.log("FIle is buffer")
-      var fileContent = file.contents.toString();
-      // console.log(fileContent);
-      var prettyString = htmlBeautifyFunction(fileContent);
-      // console.log(prettyString)
+      var prettyString = htmlBeautifyFunction(file.contents.toString(),options);
       file.contents = new Buffer(prettyString);
     }
 
@@ -42,4 +38,4 @@ function beautifyHtml(htmlBeautifyFunction, options) {
 };
 
 // exporting the plugin main function
-module.exports.beautifyHtml = beautifyHtml;
+module.exports.beautify = beautify;
