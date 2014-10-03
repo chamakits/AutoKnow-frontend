@@ -16,7 +16,7 @@ gulp.task("prettyalljs", function() {
     .pipe(gulp.dest('./app/'))
 })
 
-gulp.task("prettyalljs", function() {
+gulp.task("prettyallcss", function() {
   console.log(gulpBeautifyHtml)
   gulp.src('./app/**/*.css')
     .pipe(gulpBeautifyHtml.beautifyHtml(beautify.css))
