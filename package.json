@@ -1,0 +1,29 @@
+{
+  "name": "AutoKnow-frontend",
+  "version": "0.0.1",
+  "description": "Frontend for AutoKnow project.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chamakits/AutoKnow-frontend.git"
+  },
+  "keywords": [
+    "analytics",
+    "auto",
+    "know",
+    "autoknow"
+  ],
+  "author": "Omar Ferrer & Orlando Ferrer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chamakits/AutoKnow-frontend/issues"
+  },
+  "homepage": "https://github.com/chamakits/AutoKnow-frontend",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "js-beautify": "^1.5.3"
+  }
+}
