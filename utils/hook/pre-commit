@@ -4,3 +4,6 @@
 gulp prettyallhtml
 gulp prettyalljs
 gulp prettyallcss
+
+git diff --cached --name-status | awk '$1 != "R" { print $2 }' | xargs echo
+git diff --cached --name-status | awk '$1 != "R" { print $2 }' | xargs git add
