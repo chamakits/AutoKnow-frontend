@@ -15,13 +15,13 @@ var patterns = {
     css: ['./app/**/*.css', '!./app/vendor/**'],
     gulp: ["gulpfile.js"]
 };
+var rootDestination = "./app";
 var taskFunctions = {
     html: beautifyFilesClosure(patterns.html, beautify.html, rootDestination),
     js: beautifyFilesClosure(patterns.js, beautify.js, rootDestination),
     css: beautifyFilesClosure(patterns.css, beautify.css, rootDestination),
     gulp: beautifyFilesClosure("gulpfile.js", beautify.js, "./.")
 }
-var rootDestination = "./app";
 
 gulp.task("prettyallhtml", taskFunctions.prettyhtml);
 
@@ -38,5 +38,5 @@ gulp.task("watchall", function() {
 
     gulp.watch(patterns.js, taskFunctions.js);
 
-    gulp.watch(patterns.gulp, taskFunctions.gulp);
+    // gulp.watch(patterns.gulp, taskFunctions.gulp);
 });

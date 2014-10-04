@@ -11,6 +11,7 @@
     <script src="/vendor/angularjs1.2.25/angular.js"></script>
     <script src="/vendor/angularjs1.2.25/angular-resource.js"></script>
     <script src="/app/main/app.js"></script>
+    <script src="/app/main/menu-ctrl.js"></script>
     <script src="/app/links-display/links-display-ctrl.js"></script>
     <style>
         a {
@@ -19,17 +20,18 @@
     </style>
 </head>
 
-<body>
+<body ng-app="autoKnowApp">
 
-    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+
+    <div class="pure-menu pure-menu-open pure-menu-horizontal" ng-controller="MenuController">
         <a href="#" class="pure-menu-heading">AutoKnow</a>
 
         <ul>
-            <li ng-repeat="header in headers"><a ng-ref="{{header.link}}">{{header.text}}</a>
+            <li class="pure-menu-selected" ng-repeat="header in headers"><a ng-href="{{header.link}}">{{header.text}}</a>
             </li>
         </ul>
 
-        <ul>
+        <!-- <ul>
             <li class="pure-menu-selected"><a href="/">Home</a>
             </li>
             <li><a href="/app/links-display/links-display.html">Link Display</a>
@@ -39,9 +41,12 @@
             <li><a href="localhost:8080/myPath">myPath example</a>
             </li>
 
-        </ul>
+        </ul> -->
     </div>
 
+
+    <div ng-view ng-controller="RouteController">
+    </div>
 </body>
 
 </html>
