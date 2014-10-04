@@ -22,8 +22,10 @@ function beautify(beautifyFunction, options) {
             // gutil.log("Checking file:"+ file.path)
             var originalString = file.contents.toString();
             if ((!originalString) || (originalString.length === 0)) {
-                this.push(file);
-                return cb();
+                gutil.log("Should do NOTHING.  Picked original file as empty.")
+                // this.push(file);
+                // return cb();
+                return gutil.noop();
             }
             var prettyString = beautifyFunction(originalString, options);
 
