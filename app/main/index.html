@@ -1,14 +1,11 @@
 <html>
 
 <head>
-
-
     <link rel="stylesheet" href="/vendor/bootstrap-3.2.0-dist/css/bootstrap.css"></link>
     <link rel="stylesheet" href="/vendor/bootstrap-3.2.0-dist/css/bootstrap-theme.css"></link>
 
     <link rel="stylesheet" href="/vendor/purecss-0.5.0/pure.css"></link>
     <link rel="stylesheet" href="/vendor/purecss-0.5.0/forms.css"></link>
-
 
     <script src="/vendor/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
     <script src="/vendor/angularjs1.2.25/angular.js"></script>
@@ -28,6 +25,11 @@
         <a href="#" class="pure-menu-heading">AutoKnow</a>
 
         <ul>
+            <li ng-repeat="header in headers"><a ng-ref="{{header.link}}">{{header.text}}</a>
+            </li>
+        </ul>
+
+        <ul>
             <li class="pure-menu-selected"><a href="/">Home</a>
             </li>
             <li><a href="/app/links-display/links-display.html">Link Display</a>
@@ -36,6 +38,7 @@
             </li>
             <li><a href="localhost:8080/myPath">myPath example</a>
             </li>
+
         </ul>
     </div>
 

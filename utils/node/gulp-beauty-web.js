@@ -11,6 +11,14 @@ function prefixStream(prefixText) {
 }
 console.log("Loaded!")
 
+//S
+function getAllMethods(object) {
+    return Object.getOwnPropertyNames(object).filter(function(property) {
+      return typeof object[property] == 'function';
+    });
+}
+//E
+
 // plugin level function (dealing with files)
 function beautify(beautifyFunction, options) {
   // creating a stream through which each file will pass
@@ -20,8 +28,13 @@ function beautify(beautifyFunction, options) {
     }
 
     if (file.isBuffer()) {
-      var prettyString = beautifyFunction(file.contents.toString(),options);
-      file.contents = new Buffer(prettyString);
+      gutil.log("Checking file:"+file.path)
+      var originalString = file.contents.toString();
+      var prettyString = beautifyFunction(originalString,options);
+      if(originalString.localeCompare(prettyString) !== 0){
+        gutil.log("File changed:",gutil.colors.cyan(file.path));
+      }
+        file.contents = new Buffer(prettyString);
     }
 
     if (file.isStream()) {
