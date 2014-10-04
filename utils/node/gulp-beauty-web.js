@@ -28,7 +28,7 @@ function beautify(beautifyFunction, options) {
     }
 
     if (file.isBuffer()) {
-      gutil.log("Checking file:"+file.path)
+      // gutil.log("Checking file:"+ file.path)
       var originalString = file.contents.toString();
       var prettyString = beautifyFunction(originalString,options);
       if(originalString.localeCompare(prettyString) !== 0){
