@@ -14,7 +14,7 @@
 
     // var autoKnowAppControllers = angular.module("autoKnowAppControllers");
     var links = [
-        new MenuLinks("/app/main/home-sub.html", "", "/", "Home"),
+        new MenuLinks("/app/main/home-part.html", "", "/", "Home"),
         new MenuLinks("/app/links-display/links-display-part.html",
             "LinkDisplayCtrl", "/link-display", "Link Display"),
         new MenuLinks("/app/links-create/links-create-part.html",
