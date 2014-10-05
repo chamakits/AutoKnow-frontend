@@ -1,4 +1,4 @@
-<html>
+<html ng-app="autoKnowApp">
 
 <head>
     <link rel="stylesheet" href="">
@@ -13,10 +13,13 @@
     <script src="/vendor/angularjs1.2.25/angular-resource.js"></script>
     <script src="/vendor/angularjs1.2.25/angular-route.js"></script>
 
+    <script src="/vendor/lodash-2.4.1/lodash.js"></script>
 
     <script src="/app/main/app.js"></script>
-    <script src="/app/main/menu-ctrl.js"></script>
+    <!-- <script src="/app/main/menu-ctrl.js"></script> -->
     <script src="/app/links-display/links-display-ctrl.js"></script>
+    <script src="/app/links-create/links-create-ctrl.js"></script>
+
     <style>
         a {
             color: inherit;
@@ -25,33 +28,21 @@
 
 </head>
 
-<body ng-app="autoKnowApp">
+<body>
 
 
     <div class="pure-menu pure-menu-open pure-menu-horizontal" ng-controller="MenuController">
         <a href="#" class="pure-menu-heading">AutoKnow</a>
 
         <ul>
-            <li class="pure-menu-selected" ng-repeat="header in headers"><a ng-href="{{header.link}}">{{header.text}}</a>
+            <li class="pure-menu-selected" ng-repeat="header in headers"><a ng-href="#{{header.link}}">{{header.text}}</a>
             </li>
         </ul>
-
-        <!-- <ul>
-            <li class="pure-menu-selected"><a href="/">Home</a>
-            </li>
-            <li><a href="/app/links-display/links-display.html">Link Display</a>
-            </li>
-            <li><a href="/app/links-create/links-create.html">Create link site</a>
-            </li>
-            <li><a href="localhost:8080/myPath">myPath example</a>
-            </li>
-
-        </ul> -->
     </div>
 
-
-    <div ng-view ng-controller="RouteController">
+    <div ng-view>
     </div>
+
 </body>
 
 </html>
