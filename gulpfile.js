@@ -31,7 +31,7 @@ gulp.task("prettyalljs", taskFunctions.prettyjs);
 
 gulp.task("prettyallcss", taskFunctions.prettycss);
 
-gulp.task("prettyall", ["prettyallhtml", "pretyalljs", "prettyallcss"]);
+gulp.task("prettyall", ["prettyallhtml", "prettyalljs", "prettyallcss"]);
 
 gulp.task("watchall", function() {
     gulp.watch(patterns.html, taskFunctions.html);
@@ -39,7 +39,7 @@ gulp.task("watchall", function() {
     gulp.watch(patterns.css, taskFunctions.css);
 
     gulp.watch(patterns.js, taskFunctions.js);
-    
+
     gulp.watch(patterns.gulp, taskFunctions.gulp);
     gulp.watch(patterns.beauty, taskFunctions.beauty);
 
