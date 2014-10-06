@@ -19,8 +19,8 @@
             "LinkDisplayCtrl", "/link-display", "Link Display"),
         new MenuLinks("/app/links-create/links-create-part.html",
             "LinkCreateCtrl", "/link-create", "Create link site"),
-        new MenuLinks("",
-            "", "localhost:8080/myPath", "myPath example"),
+        // new MenuLinks("",
+        //     "", "localhost:8080/myPath", "myPath example"),
     ];
 
     autoKnowAppControllers.controller("MenuController", ["$scope", function($scope) {

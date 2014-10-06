@@ -5,7 +5,9 @@ var beautify = require('js-beautify'); //.html;
 function beautifyFilesClosure(patterns, beautifyFunction, destination) {
     return function() {
         gulp.src(patterns)
-            .pipe(gulpBeautyWeb(beautifyFunction))
+            .pipe(gulpBeautyWeb(beautifyFunction, {
+                // "wrap_line_length": 80
+            }))
             .pipe(gulp.dest(destination));
     };
 }

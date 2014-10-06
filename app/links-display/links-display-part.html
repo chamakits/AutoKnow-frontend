@@ -9,8 +9,9 @@
             <th>Expiration Date</th>
             <th>PageViews</th>
         </thead>
+        <!-- <pre>Sorting predicate = {{predicate}}; reverse = {{reverse}}</pre> -->
         <tbody class="list">
-            <tr ng-repeat="link in links | filter:searchLinks">
+            <tr ng-repeat="link in links | orderBy:predicate:reverse | filter:searchLinks">
                 <td class="resource-path"><a ng-href="//localhost:8080/{{link.resourcePath}}">{{link.resourcePath}}</a>
                 </td>
                 <td class="redirection-path"><a ng-href="{{link.redirectionPath}}">{{link.redirectionPath}}</a>

@@ -25,6 +25,11 @@
         function($scope, makelink) {
             console.log("Controller def.");
 
+            $scope.setHttp = function(event) {
+                console.log("Setting http!");
+                console.log(event);
+            };
+
             $scope.create = function(link) {
                 // console.log("Scope create");
                 // console.log("link:");
@@ -38,7 +43,7 @@
                 postSave.then(function(req) {
                     console.log("Save success!");
                     toastr.info("Saved data succesfully!");
-                    $scope.link = null;
+                    $scope.link = {};
                 }, function(err) {
                     toastr.error("Error!");
                     toastr.error(err);

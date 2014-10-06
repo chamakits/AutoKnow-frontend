@@ -14,6 +14,9 @@
     autoKnowAppControllers.controller("LinkDisplayCtrl", ["$scope", "getlink",
         function($scope, getlink) {
 
+            $scope.predicate = "resourcePath";
+            $scope.reverse = false;
+
             getlink.query(function(data) {
                 $scope.links = data.links;
 
