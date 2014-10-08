@@ -4,7 +4,7 @@ var PluginError = gutil.PluginError;
 
 const PLUGIN_NAME = 'gulp-beauty-web';
 
-console.log("Loaded!")
+console.log("Loaded!");
 
 // plugin level function (dealing with files)
 function beautify(beautifyFunction, options) {
@@ -13,7 +13,7 @@ function beautify(beautifyFunction, options) {
         if (file.isNull()) {
             // do nothing if no contents
 
-            this.push(file)
+            this.push(file);
             return cb();
             // return;
         }
@@ -22,7 +22,7 @@ function beautify(beautifyFunction, options) {
             // gutil.log("Checking file:"+ file.path)
             var originalString = file.contents.toString();
             if ((!originalString) || (originalString.length === 0)) {
-                gutil.log("Should do NOTHING.  Picked original file as empty.")
+                gutil.log("Should do NOTHING.  Picked original file as empty.");
                 // this.push(file);
                 // return cb();
                 return gutil.noop();

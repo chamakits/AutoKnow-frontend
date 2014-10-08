@@ -7,6 +7,7 @@
         return $resource(URL, {}, {
             query: {
                 method: "POST",
+                //TODO find out if params here is needed (I think not)
                 params: {
                     "resourcePath": "myPath",
                     "redirectionPath": "http://www.google.com"
@@ -14,6 +15,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
+                //TODO remove this.
                 response: function(resp) {
                     console.log("Success!");
 
