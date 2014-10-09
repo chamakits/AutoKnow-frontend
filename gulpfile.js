@@ -1,5 +1,6 @@
 var gulp = require('gulp');
-var gulpBeautyWeb = require('./utils/node/gulp-beauty-web.js').beautify;
+// var gulpBeautyWeb = require('./utils/node/gulp-beauty-web.js').beautify;
+var gulpBeautyWeb = require('gulp-beauty-web').beautify;
 var beautify = require('js-beautify'); //.html;
 
 var connect = require('gulp-connect');
