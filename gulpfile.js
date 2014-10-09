@@ -1,5 +1,9 @@
+
 var gulp = require('gulp');
 // var gulpBeautyWeb = require('./utils/node/gulp-beauty-web.js').beautify;
+// Will hopefully distribute this at some point.
+// For now see it here: https://github.com/chamakits/gulp-beauty-web
+// Might need to install manually.
 var gulpBeautyWeb = require('gulp-beauty-web').beautify;
 var beautify = require('js-beautify'); //.html;
 
