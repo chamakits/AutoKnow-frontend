@@ -2,6 +2,16 @@ var gulp = require('gulp');
 var gulpBeautyWeb = require('./utils/node/gulp-beauty-web.js').beautify;
 var beautify = require('js-beautify'); //.html;
 
+var connect = require('gulp-connect');
+
+gulp.task('connect', function() {
+  connect.server({
+    // root: 'app',
+    livereload: true,
+    port: 18222
+  });
+});
+
 function beautifyFilesClosure(patterns, beautifyFunction, destination) {
     return function() {
         gulp.src(patterns)
