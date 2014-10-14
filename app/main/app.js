@@ -1,4 +1,4 @@
-(function() {
+(function(that) {
     var autoKnowApp = angular.module("autoKnowApp", ["autoKnowAppControllers",
         "ngResource", "ngRoute"
     ]);
@@ -9,6 +9,7 @@
         this.link = link;
         this.text = text;
     };
+    that.MenuLinks = MenuLinks;
 
     var autoKnowAppControllers = angular.module("autoKnowAppControllers", []);
 
